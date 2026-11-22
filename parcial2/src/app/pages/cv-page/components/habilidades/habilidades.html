@@ -1,1 +1,22 @@
-<p>habilidades works!</p>
+<div class="card shadow-sm border-0">
+  <div class="card-header bg-white border-bottom-0 pt-3">
+    <h4 class="h5 fw-bold mb-0">
+      <i class="bi bi-tools text-primary me-2"></i>Conocimientos y Habilidades
+    </h4>
+  </div>
+  <div class="card-body">
+    <ul class="list-group list-group-flush">
+      @for (skill of habilidadesTecnicas; track skill.nombre) {
+        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+          <div>
+            <span class="fw-semibold">{{ skill.nombre }}</span>
+            <small class="d-block text-muted">{{ skill.categoria }}</small>
+          </div>
+          <span class="badge rounded-pill bg-primary-subtle text-primary">
+            {{ skill.nivel }}
+          </span>
+        </li>
+      }
+    </ul>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { CvPage } from './pages/cv-page/cv-page';
 import { AprendizajePage } from './pages/aprendizaje-page/aprendizaje-page';
-import { LibrosPage } from './pages/libros-page/libros-page';
+import { LibrosPage } from './pages/tema-libre-page/libros-page';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'hoja-de-vida', pathMatch: 'full' },

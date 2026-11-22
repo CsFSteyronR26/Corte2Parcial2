@@ -13,12 +13,19 @@ export interface Formacion {
   estado: string;
 }
 
-export interface ExperienciaProyecto {
-  cargo: string;
-  entidad: string;
+export interface Experiencia{
+  puesto: string;
+  empresa: string;
   periodo: string;
   descripcion: string;
   tecnologias: string[];
+  proyectos: string[];
+}
+
+export interface Habilidad {
+  nombre: string;
+  categoria: string;
+  nivel: string;
 }
 
 export interface TemaCurso {
