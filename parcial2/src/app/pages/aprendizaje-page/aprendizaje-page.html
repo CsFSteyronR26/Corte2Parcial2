@@ -1,1 +1,44 @@
-<p>aprendizaje-page works!</p>
+<section class="mb-4">
+  <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
+    <div>
+      <h2 class="fw-bold mb-1">
+        <i class="bi bi-journal-code text-primary me-2"></i>Proceso de Aprendizaje en el Curso
+      </h2>
+      <p class="text-muted mb-0">
+        Resumen de temáticas, tecnologías y proyectos desarrollados en Programación en Ambiente Web I.
+      </p>
+    </div>
+    <span class="badge bg-primary fs-6 mt-2 mt-md-0">{{ temas.length }} Módulos</span>
+  </div>
+
+  <div class="row g-4">
+    @for (tema of temas; track tema.titulo) {
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <span class="fw-semibold">{{ tema.modulo }}</span>
+            <i class="bi bi-check-circle-fill"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 fw-bold card-title">{{ tema.titulo }}</h3>
+            <p class="card-text text-muted small flex-grow-1">{{ tema.descripcion }}</p>
+
+            <div class="mb-3">
+              <strong class="small d-block mb-1">Tecnologías aplicadas:</strong>
+              <div class="d-flex flex-wrap gap-1">
+                @for (tech of tema.tecnologias; track tech) {
+                  <span class="badge bg-light text-dark border">{{ tech }}</span>
+                }
+              </div>
+            </div>
+
+            <div class="alert alert-light border mb-0 py-2 px-3 small">
+              <i class="bi bi-laptop text-primary me-1"></i>
+              <strong>Actividad:</strong> {{ tema.actividad }}
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>
